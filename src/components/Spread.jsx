@@ -1,7 +1,7 @@
 export default function Spread() {
   return (
-    <div className="w-full bg-white py-20">
-      <div className="max-wscreen-2xl mx-auto px-5 sm:px-10">
+    <div className="w-full bg-white py-20 sm:py-8 sm:px-24">
+      <div className="max-w-screen-2xl mx-auto ">
         <div className="flex items-center gap-3 justify-center">
           <svg
             viewBox="0 0 12 12"
@@ -18,10 +18,10 @@ export default function Spread() {
           </svg>
           <h3>In the Media</h3>
         </div>
-        <div className="heading mt-5 inline-block text-center">
-          <h1 className="text-5xl tracking-tighter">Spread</h1>
-          <h1 className="text-5xl tracking-tighter">the News</h1>
-          <p className="mt-4 px-20 leading-2 text-md">
+        <div className="heading mt-5 py-6 text-center">
+          <h1 className="text-5xl sm:text-9xl sm:leading-none tracking-tighter">Spread</h1>
+          <h1 className="text-5xl sm:text-9xl sm:leading-none tracking-tighter">the News</h1>
+          <p className="mt-4 w-3/2 sm:w-1/2 px-6 mx-auto leading-2 text-md sm:text-lg">
             Find out more about our work on these leading design and technology
             platforms.
           </p>

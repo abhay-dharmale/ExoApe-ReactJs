@@ -6,9 +6,11 @@ import Playreel from "./components/Playreel";
 import Images from "./components/Images";
 import Spread from "./components/Spread";
 
+import LocomotiveScroll from 'locomotive-scroll';
 
 
 export default function App() {
+  const locomotiveScroll = new LocomotiveScroll()
   return (
     <main className="w-full">
       <Navbar />
