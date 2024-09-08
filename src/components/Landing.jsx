@@ -17,7 +17,7 @@ export default function App() {
                brands and businesses that create exceptional
             </p>
             <p className="text-md sm:text-2xl"> experiences live, work, and unwind</p>
-            <p className="text-md sm:text-2xl"> </p>
+            {/* <p className="text-md sm:text-2xl"> </p> */}
           </div>
           <div className="headings mt-5 sm:mt-10">
             <h1 className="text-6xl sm:text-[14rem] tracking-tighter leading-none">

@@ -1,10 +1,16 @@
+import { easeInOut, motion } from "framer-motion";
 import { IoMenu } from "react-icons/io5";
 
 export default function Navbar() {
   return (
     <div className="w-full fixed z-[99]">
       <div className=" max-w-screen-2xl mx-auto p-5 sm:py-8 sm:px-10 flex items-center justify-between text-white">
-        <div className="logo">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.7, ease: easeInOut }}
+          className="logo"
+        >
           <svg
             viewBox="0 0 95 25"
             fill="none"
@@ -43,11 +49,21 @@ export default function Navbar() {
               data-v-1932cced=""
             ></path>
           </svg>
-        </div>
-        <span className="md:hidden">
+        </motion.div>
+        <motion.span
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.7, ease: easeInOut }}
+          className="md:hidden"
+        >
           <IoMenu />
-        </span>
-        <div className="links hidden sm:flex gap-10">
+        </motion.span>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.7, ease: easeInOut }}
+          className="links hidden sm:flex gap-10"
+        >
           {["work", "studio", "news", "contact"].map((link, index) => {
             return (
               <a key={index} className="text-sm font-light capitalize">
@@ -55,7 +71,7 @@ export default function Navbar() {
               </a>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
