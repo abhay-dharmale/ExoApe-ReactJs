@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { Expo, Power4 } from "gsap";
 
 export default function Work() {
   const [data, setData] = useState([
@@ -47,7 +49,9 @@ export default function Work() {
           </svg>
           <h3>Featured Projects</h3>
         </div>
-        <h1 className="text-7xl sm:text-[15rem] sm:tracking-tighter sm:leading-none my-6">Work</h1>
+        <h1 className="text-7xl sm:text-[15rem] sm:tracking-tighter sm:leading-none my-6 overflow-hidden">
+          <motion.span initial={{rotate: 70, y: "40%", opacity: 0}} whileInView={{rotate: 0, y: 0, opacity: 1}} viewport={{once: true}} transition={{duration: 1, ease: Expo.easeInOut}} className="inline-block origin-left">Work</motion.span>
+        </h1>
         <p className="leading-2 text-lg">
           Highlights of cases that we passionately built with forward-thinking
           clients and friends over the years.
@@ -57,9 +61,16 @@ export default function Work() {
             return (
               <div key={index} className="elem w-full sm:w-[48%] mt-10">
                 <div className="video w-full h-[104vw] sm:h-[50vw] relative overflow-hidden">
-                  <img className="w-full h-full object-cover hidden sm:block" src={elem.imageSrc} />
+                  <motion.img
+                  initial={{opacity: 1}}
+                  whileHover={{opacity: 0}}
+                  data-scroll
+                  data-scroll-speed="-.2"
+                    className="w-full h-full sm:absolute sm:top-0 sm:left-0 sm:z-[2] object-cover hidden sm:block"
+                    src={elem.imageSrc}
+                  />
                   <video
-                    className="w-full h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.3] block sm:hidden"
+                    className="w-full h-full z-[1] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.3] block"
                     autoPlay
                     loop
                     muted

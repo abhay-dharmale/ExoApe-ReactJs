@@ -1,7 +1,28 @@
+import { Power4 } from "gsap";
+import gsap, {ScrollTrigger} from "gsap/all";
+import { useEffect, useRef } from "react";
+
 export default function Playreel() {
+  const parent = useRef(null);
+  const videodiv = useRef(null);
+
+  useEffect(()=>{
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(videodiv.current, {
+      scrollTrigger:{
+        trigger: parent.current,
+        top: "top top",
+        pin: true,
+        scrub: 1,
+      },
+      width: "80%",
+      height: "80%",
+      ease: Power4,
+    })
+  })
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black">
-      <div className="absolute w-40 sm:w-96 aspect-video top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+    <div ref={parent} className="relative w-full h-screen overflow-hidden bg-black">
+      <div ref={videodiv} className="absolute w-40 sm:w-96 aspect-video top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <video
           className="w-full h-full overflow-hidden scale-[1.2]"
           autoPlay
