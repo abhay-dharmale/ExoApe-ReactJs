@@ -50,7 +50,15 @@ export default function Work() {
           <h3>Featured Projects</h3>
         </div>
         <h1 className="text-7xl sm:text-[15rem] sm:tracking-tighter sm:leading-none my-6 overflow-hidden">
-          <motion.span initial={{rotate: 70, y: "40%", opacity: 0}} whileInView={{rotate: 0, y: 0, opacity: 1}} viewport={{once: true}} transition={{duration: 1, ease: Expo.easeInOut}} className="inline-block origin-left">Work</motion.span>
+          <motion.span
+            initial={{ rotate: 70, y: "50%", opacity: 0 }}
+            whileInView={{ rotate: 0, y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: Expo.easeInOut }}
+            className="inline-block origin-left"
+          >
+            Work
+          </motion.span>
         </h1>
         <p className="leading-2 text-lg">
           Highlights of cases that we passionately built with forward-thinking
@@ -62,10 +70,10 @@ export default function Work() {
               <div key={index} className="elem w-full sm:w-[48%] mt-10">
                 <div className="video w-full h-[104vw] sm:h-[50vw] relative overflow-hidden">
                   <motion.img
-                  initial={{opacity: 1}}
-                  whileHover={{opacity: 0}}
-                  data-scroll
-                  data-scroll-speed="-.2"
+                    initial={{ opacity: 1 }}
+                    whileHover={{ opacity: 0 }}
+                    data-scroll
+                    data-scroll-speed="-.2"
                     className="w-full h-full sm:absolute sm:top-0 sm:left-0 sm:z-[2] object-cover hidden sm:block"
                     src={elem.imageSrc}
                   />

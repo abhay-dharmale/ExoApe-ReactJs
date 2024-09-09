@@ -1,6 +1,9 @@
+import { motion } from "framer-motion";
+import { Expo } from "gsap";
+
 export default function Spread() {
   return (
-    <div className="w-full bg-white py-20 sm:py-8 sm:px-24">
+    <div className="w-full bg-white py-20 sm:py-12 sm:px-24">
       <div className="max-w-screen-2xl mx-auto ">
         <div className="flex items-center gap-3 justify-center">
           <svg
@@ -19,8 +22,32 @@ export default function Spread() {
           <h3>In the Media</h3>
         </div>
         <div className="heading mt-5 py-6 text-center">
-          <h1 className="text-5xl sm:text-9xl sm:leading-none tracking-tighter">Spread</h1>
-          <h1 className="text-5xl sm:text-9xl sm:leading-none tracking-tighter">the News</h1>
+          <h1 className="text-5xl sm:text-9xl sm:leading-none tracking-tighter overflow-hidden">
+            <motion.span
+              initial={{ rotate: 90, y: "45%" }}
+              whileInView={{ rotate: 0, y: 0 }}
+              transition={{
+                ease: Expo.easeInOut,
+                duration: 1.5,
+              }}
+              className="inline-block origin-left"
+            >
+              Spread
+            </motion.span>
+          </h1>
+          <h1 className="text-5xl sm:text-9xl sm:leading-none tracking-tighter overflow-hidden">
+          <motion.span
+              initial={{ rotate: 90, y: "45%" }}
+              whileInView={{ rotate: 0, y: 0 }}
+              transition={{
+                ease: Expo.easeInOut,
+                duration: 1.5,
+              }}
+              className="inline-block origin-left"
+            >
+              the News
+            </motion.span>
+          </h1>
           <p className="mt-4 w-3/2 sm:w-1/2 px-6 mx-auto leading-2 text-md sm:text-lg">
             Find out more about our work on these leading design and technology
             platforms.
@@ -33,7 +60,13 @@ export default function Spread() {
               data-v-5152decb=""
               fill="none"
             >
-              <circle cx="25" cy="25" r="23" stroke="black" data-v-5152decb=""></circle>
+              <circle
+                cx="25"
+                cy="25"
+                r="23"
+                stroke="black"
+                data-v-5152decb=""
+              ></circle>
             </svg>
             <a
               href="#"
