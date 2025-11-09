@@ -5,7 +5,7 @@ import Work from "./components/Work";
 import Playreel from "./components/Playreel";
 import Images from "./components/Images";
 import Spread from "./components/Spread";
-
+import Footer from "./components/Footer";
 
 import LocomotiveScroll from 'locomotive-scroll';
 
@@ -20,6 +20,7 @@ export default function App() {
       <Playreel />
       <Images />
       <Spread />
+      <Footer />
     </main>
   );
 }

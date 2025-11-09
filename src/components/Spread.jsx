@@ -3,7 +3,7 @@ import { Expo } from "gsap";
 
 export default function Spread() {
   return (
-    <div className="w-full bg-white py-20 sm:py-12 sm:px-24">
+    <div className="w-full bg-white py-20 sm:py-12 sm:px-24 overflow-hidden">
       <div className="max-w-screen-2xl mx-auto ">
         <div className="flex items-center gap-3 justify-center">
           <svg
